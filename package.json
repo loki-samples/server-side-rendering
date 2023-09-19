@@ -1,0 +1,19 @@
+{
+  "name": "hydrate-server",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build:server": "esbuild ./server/server.jsx --bundle --outfile=build/server.js --platform=node",
+    "build:client": "esbuild ./client/index.jsx --bundle --outfile=build/client.js",
+    "build": "npm run build:server && npm run build:client",
+    "start": "node ./build/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.19.3",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
